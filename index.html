@@ -30,10 +30,27 @@
     <!-- Header section -->
     <header class="header">
       <div class="header-container container">
-        <nav class="nav">
-          <a class="header-nav-logo link" href="./index.html"
-            >Web<span class="studio-logo">Studio</span></a
+        <a class="header-nav-logo link" href="./index.html"
+          >Web<span class="studio-logo">Studio</span></a
+        >
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="32"
+            height="22"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
+            <use href="./images/icons.svg#menu-hamburger"></use>
+          </svg>
+        </button>
+
+        <nav class="nav">
           <ul class="header-nav-list list">
             <li class="item">
               <a class="header-nav-link active link" href="./index.html"
@@ -170,11 +187,15 @@
       </section>
       <!-- Team section -->
       <section class="team-section">
-        <div class="container">
+        <div class="team-container container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team/img1_264.jpg 1x,
+                  ./images/team/img1_528.jpg 2x
+                "
                 class="team-img"
                 src="./images/team/img1.jpg"
                 alt="photo of a team member"
@@ -242,6 +263,10 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team/img2_264.jpg 1x,
+                  ./images/team/img2_528.jpg 2x
+                "
                 class="team-img"
                 src="./images/team/img2.jpg"
                 alt="photo of a team member"
@@ -309,6 +334,10 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team/img3_264.jpg 1x,
+                  ./images/team/img3_528.jpg 2x
+                "
                 class="team-img"
                 src="./images/team/img3.jpg"
                 alt="photo of a team member"
@@ -376,6 +405,10 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team/img4_264.jpg 1x,
+                  ./images/team/img4_528.jpg 2x
+                "
                 class="team-img"
                 src="./images/team/img4.jpg"
                 alt="photo of a team member"
@@ -446,7 +479,7 @@
       </section>
 
       <!-- Customers -->
-      <section class="customers-section">
+      <section class="customers-section section">
         <div class="container">
           <h2 class="customers-title">Customers</h2>
           <ul class="company-icons list">
@@ -533,7 +566,7 @@
       </section>
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer-container container">
         <div class="footer-flex">
           <a class="header-nav-logo footer-nav-logo link" href="./index.html"
@@ -600,7 +633,7 @@
           </div>
         </form>
       </div>
-    </footer>
+    </footer> -->
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -669,6 +702,81 @@
         </form>
       </div>
     </div>
+
+    <!-- Mobile menu burger -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="burger-close-btn menu-toggle js-close-menu">
+        <svg class="burger-close-icon" width="8" height="8">
+          <use href="./images/icons.svg#close-icon"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="mobile-menu-link active link">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./portfolio.html" class="mobile-menu-link link">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="" class="mobile-menu-link link">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts list">
+        <li>
+          <a href="tel:110001111111" class="contacts-link link"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="contacs-link email link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile-social list">
+        <li class="footer-social-item">
+          <a href="" class="footer-social-link link">
+            <svg class="footer-social-icon" width="24" height="24">
+              <use href="./images/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a href="" class="footer-social-link link">
+            <svg class="footer-social-icon" width="24" height="24">
+              <use href="./images/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a href="" class="footer-social-link link">
+            <svg class="footer-social-icon" width="24" height="24">
+              <use href="./images/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a href="" class="footer-social-link link">
+            <svg class="footer-social-icon" width="24" height="24">
+              <use href="./images/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <script src="js/modal.js"></script>
+
+    <!-- Mobile menu js -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
