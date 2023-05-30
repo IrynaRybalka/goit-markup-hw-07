@@ -1302,13 +1302,17 @@ button {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    justify-content: center;
+    justify-content: start;
     /* row-gap: 72px;
     column-gap: 24px; */
 }
 
 @media only screen and (min-width: 428px) and (max-width: 757px) {
     .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
         row-gap: 72px;
         column-gap: 24px;
     }
